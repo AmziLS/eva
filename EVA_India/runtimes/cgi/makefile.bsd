@@ -1,0 +1,17 @@
+#debug
+#C_FLAGS = -g
+#release
+C_FLAGS = -O6
+
+CC = gcc
+
+all: eva_cgi
+
+eva_cgi: eva_cgi.c $(AMZI_DEV_DIR)/lib/libarules.so
+	$(CC) -DBSD -I$(AMZI_DEV_DIR)/include -L$(AMZI_DEV_DIR)/lib $(C_FLAGS) -o eva_cgi \
+	   eva_cgi.c -larules -lm -lstdc++
+	cp eva_cgi /usr/local/apache/cgi-bin/eva_cgi
+
+clean:
+	-rm *.o
+

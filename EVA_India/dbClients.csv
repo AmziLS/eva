@@ -1,0 +1,7 @@
+"1","2010-1-1","male","2010-1-5","all","newborn, no vaccinations"
+"2","2010-1-1","female","2010-1-5","all","newborn, vaccinated"
+"3","2010-1-1","female","2010-2-15","all","6th week"
+"mmr_1","2005-1-1","male","2006-2-16","['MMR']","Measles, 1 dose"
+"mmr_2","2005-1-1","male","2006-7-1","['MMR']","Measles, MMR, 1 each"
+"typhoid_1","2000-1-1","female","2003-3-15","['Typhoid']","Typhoid, 1 dose"
+"typhoid_2","2000-1-1","female","2007-3-15","['Typhoid']","Typhoid, 2 doses"

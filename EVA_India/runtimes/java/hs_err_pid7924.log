@@ -1,0 +1,150 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x680664c0, pid=7924, tid=8016
+#
+# JRE version: 6.0_18-b07
+# Java VM: Java HotSpot(TM) Client VM (16.0-b13 mixed mode, sharing windows-x86 )
+# Problematic frame:
+# C  [ARULES.dll+0x664c0]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000f9400):  JavaThread "main" [_thread_in_native, id=8016, stack(0x013f0000,0x01440000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x00000004
+
+Registers:
+EAX=0x03e46b10, EBX=0xffffffff, ECX=0x03e475f0, EDX=0x000000f0
+ESP=0x0143fabc, EBP=0x00000000, ESI=0x03e4df88, EDI=0x03fd1080
+EIP=0x680664c0, EFLAGS=0x00010206
+
+Top of Stack: (sp=0x0143fabc)
+0x0143fabc:   55355709 03fd1080 03e4df88 0143fb48
+0x0143facc:   00000000 04754470 0143fb3c 680764b0
+0x0143fadc:   3c7d6cc1 fffffffe 680694a6 680609d4
+0x0143faec:   0143fb3c 680928c8 ffffffff 68066e36
+0x0143fafc:   00000000 000004b0 00000004 03e4df88
+0x0143fb0c:   00001388 68066ee9 00000004 00000000
+0x0143fb1c:   00000001 55355681 03e46b10 03e46b10
+0x0143fb2c:   03e92a28 6daabad0 03e4df88 0143fb20 
+
+Instructions: (pc=0x680664c0)
+0x680664b0:   24 40 8b 59 64 89 6c 24 40 8d a4 24 00 00 00 00
+0x680664c0:   8b 45 04 85 c0 79 1b 25 00 00 00 7f 3d 00 00 00 
+
+
+Stack: [0x013f0000,0x01440000],  sp=0x0143fabc,  free space=13e0143f5f0k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [ARULES.dll+0x664c0]
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  amzi.ls.ARulesLogicServer.TermToStrQ(JI)Ljava/lang/String;+0
+j  EVA.analyze()V+479
+j  EVA_India.main([Ljava/lang/String;)V+80
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0197c800 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=7808, stack(0x03d90000,0x03de0000)]
+  0x01962c00 JavaThread "CompilerThread0" daemon [_thread_blocked, id=7272, stack(0x03d40000,0x03d90000)]
+  0x0195d800 JavaThread "Attach Listener" daemon [_thread_blocked, id=6392, stack(0x03cf0000,0x03d40000)]
+  0x0195a800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5456, stack(0x03ca0000,0x03cf0000)]
+  0x01953400 JavaThread "Finalizer" daemon [_thread_blocked, id=6204, stack(0x03c50000,0x03ca0000)]
+  0x01951c00 JavaThread "Reference Handler" daemon [_thread_blocked, id=8124, stack(0x03c00000,0x03c50000)]
+=>0x000f9400 JavaThread "main" [_thread_in_native, id=8016, stack(0x013f0000,0x01440000)]
+
+Other Threads:
+  0x01950400 VMThread [stack: 0x03bb0000,0x03c00000] [id=6608]
+  0x01986400 WatcherThread [stack: 0x03de0000,0x03e30000] [id=5884]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4928K, used 369K [0x23d80000, 0x242d0000, 0x292d0000)
+  eden space 4416K,   8% used [0x23d80000, 0x23ddc660, 0x241d0000)
+  from space 512K,   0% used [0x241d0000, 0x241d0000, 0x24250000)
+  to   space 512K,   0% used [0x24250000, 0x24250000, 0x242d0000)
+ tenured generation   total 10944K, used 0K [0x292d0000, 0x29d80000, 0x33d80000)
+   the space 10944K,   0% used [0x292d0000, 0x292d0000, 0x292d0200, 0x29d80000)
+ compacting perm gen  total 12288K, used 68K [0x33d80000, 0x34980000, 0x37d80000)
+   the space 12288K,   0% used [0x33d80000, 0x33d91110, 0x33d91200, 0x34980000)
+    ro space 10240K,  54% used [0x37d80000, 0x382f8290, 0x382f8400, 0x38780000)
+    rw space 12288K,  55% used [0x38780000, 0x38e1d1c0, 0x38e1d200, 0x39380000)
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	C:\Program Files\Java\jdk1.6.0_18\bin\javaw.exe
+0x77b50000 - 0x77c77000 	C:\Windows\system32\ntdll.dll
+0x76900000 - 0x769dc000 	C:\Windows\system32\kernel32.dll
+0x76570000 - 0x76636000 	C:\Windows\system32\ADVAPI32.dll
+0x764a0000 - 0x76563000 	C:\Windows\system32\RPCRT4.dll
+0x767d0000 - 0x7686d000 	C:\Windows\system32\USER32.dll
+0x77cb0000 - 0x77cfb000 	C:\Windows\system32\GDI32.dll
+0x77c80000 - 0x77c9e000 	C:\Windows\system32\IMM32.DLL
+0x769e0000 - 0x76aa8000 	C:\Windows\system32\MSCTF.dll
+0x76640000 - 0x766ea000 	C:\Windows\system32\msvcrt.dll
+0x77ca0000 - 0x77ca9000 	C:\Windows\system32\LPK.DLL
+0x77980000 - 0x779fd000 	C:\Windows\system32\USP10.dll
+0x6c1b0000 - 0x6c1b5000 	C:\Windows\system32\avgrsstx.dll
+0x7c340000 - 0x7c396000 	C:\Program Files\Java\jdk1.6.0_18\jre\bin\msvcr71.dll
+0x6d8b0000 - 0x6db47000 	C:\Program Files\Java\jdk1.6.0_18\jre\bin\client\jvm.dll
+0x748b0000 - 0x748e2000 	C:\Windows\system32\WINMM.dll
+0x77a00000 - 0x77b45000 	C:\Windows\system32\ole32.dll
+0x77d20000 - 0x77dad000 	C:\Windows\system32\OLEAUT32.dll
+0x74870000 - 0x748ad000 	C:\Windows\system32\OLEACC.dll
+0x761f0000 - 0x7621c000 	C:\Windows\system32\apphelp.dll
+0x6d860000 - 0x6d86c000 	C:\Program Files\Java\jdk1.6.0_18\jre\bin\verify.dll
+0x6d3e0000 - 0x6d3ff000 	C:\Program Files\Java\jdk1.6.0_18\jre\bin\java.dll
+0x6d340000 - 0x6d348000 	C:\Program Files\Java\jdk1.6.0_18\jre\bin\hpi.dll
+0x763b0000 - 0x763b7000 	C:\Windows\system32\PSAPI.DLL
+0x6d8a0000 - 0x6d8af000 	C:\Program Files\Java\jdk1.6.0_18\jre\bin\zip.dll
+0x10000000 - 0x1007b000 	C:\amzi\dev\arules\ARulesXL\api\bin_redist\arulesjni.dll
+0x68000000 - 0x680d0000 	c:\amzi\dev\arules\ARulesXL\api\bin_redist\ARULES.dll
+0x76ab0000 - 0x76add000 	C:\Windows\system32\WS2_32.dll
+0x77d10000 - 0x77d16000 	C:\Windows\system32\NSI.dll
+0x75b80000 - 0x75b99000 	C:\Windows\system32\IPHLPAPI.DLL
+0x75b40000 - 0x75b75000 	C:\Windows\system32\dhcpcsvc.DLL
+0x75dc0000 - 0x75dec000 	C:\Windows\system32\DNSAPI.dll
+0x76250000 - 0x76264000 	C:\Windows\system32\Secur32.dll
+0x75b30000 - 0x75b37000 	C:\Windows\system32\WINNSI.DLL
+0x75b00000 - 0x75b22000 	C:\Windows\system32\dhcpcsvc6.DLL
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: EVA_India
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=c:\Program Files\Java\jdk1.6.0_18
+CLASSPATH=.;c:\amzi\dev\a9\lsapis\java20;c:\amzi\dev\arules\ARulesXL\api\java;C:\Program Files\Java\jre6\lib\ext\QTJava.zip
+PATH=c:/Program Files/Java/jdk1.6.0_18/bin/../jre/bin/client;c:/Program Files/Java/jdk1.6.0_18/bin/../jre/bin;c:\amzi\dev\a9\bin;c:\amzi\dev\arules\ARulesXL\api\bin_redist;c:\Program Files\Java\jdk1.6.0_18\bin;c:\sun\sdk\bin;C:\pvsw\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Common Files\Roxio Shared\9.0\DLLShared\;c:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE;c:\Program Files\utilities;c:\Program Files\WiX;C:\Program Files\QuickTime\QTSystem\
+USERNAME=Dennis
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 6, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows Vista Build 6002 Service Pack 2
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 15 stepping 6, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3
+
+Memory: 4k page, physical 3404536k(1551176k free), swap 7029248k(5075632k free)
+
+vm_info: Java HotSpot(TM) Client VM (16.0-b13) for windows-x86 JRE (1.6.0_18-b07), built on Dec 17 2009 13:35:55 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Sat May 29 11:27:58 2010
+elapsed time: 0 seconds
+
