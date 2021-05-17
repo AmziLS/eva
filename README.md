@@ -13,6 +13,6 @@ See the documentation for details, and don't hesitate to contact me if you're in
 --Dennis
 open.source@amzi.com
 
-Videos:
-[EVA for Implementing Vaccination Knowledge Part 1 of 2](https://www.youtube.com/watch?v=2Wqmd3s8VKc)
+##Videos
+[EVA for Implementing Vaccination Knowledge Part 1 of 2](https://www.youtube.com/watch?v=2Wqmd3s8VKc)    
 [EVA for Implementing Vaccination Knowledge Part 2 of 2](https://www.youtube.com/watch?v=qaT8R9gMhYg)
