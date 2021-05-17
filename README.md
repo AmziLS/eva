@@ -1,4 +1,4 @@
-#Electronic Vaccine Analysis framework, EVA
+# Electronic Vaccine Analysis framework, EVA
 
 EVA is a tool for creating vaccination analysis and forecasting software.  It has a complete framework that understands vaccines and all that's required to add/modify vaccination rules is to enter the specific information about a vaccine.  It is designed to be maintained by people with pediatric knowledge, rather than programming knowledge.
 
@@ -13,6 +13,6 @@ See the documentation for details, and don't hesitate to contact me if you're in
 --Dennis
 open.source@amzi.com
 
-##Videos
+## Videos
 [EVA for Implementing Vaccination Knowledge Part 1 of 2](https://www.youtube.com/watch?v=2Wqmd3s8VKc)    
 [EVA for Implementing Vaccination Knowledge Part 2 of 2](https://www.youtube.com/watch?v=qaT8R9gMhYg)
